@@ -7,4 +7,5 @@ title = "Agile is a lot like Communism"
 
 +++
 
+ok?
 

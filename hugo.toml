@@ -1,4 +1,4 @@
-baseURL = 'https://brenthoover.com/'
+baseURL = 'https://hugo-blog-dsj.pages.dev/'
 languageCode = 'en-us'
 title = 'The Empathy Project'
 theme = 'PaperMod'
