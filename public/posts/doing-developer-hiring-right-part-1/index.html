@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Doing Developer Hiring Right - Part 1 | The Empath Project</title>
+<meta name="keywords" content="">
+<meta name="description" content="Hiring the right people is one of the most important decisions you make at an early stage startup. Here is how we did it at Merchstack
+When I started at Merchstack one of the first documents I wrote was “How We Hire”. At a small company each hire is a critical decision, and one bad decision can knock you off course. How we hire would also set the tone for how we treat employees, and also how we see our relationship with employees. Were we actually working together in the best interests of everyone, or just extracting the most value possible for the least amount of money?">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/doing-developer-hiring-right-part-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/doing-developer-hiring-right-part-1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="The Empath Project (Alt + H)">The Empath Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Doing Developer Hiring Right - Part 1
+    </h1>
+    <div class="post-meta"><span title='2024-06-21 12:42:08 +0000 UTC'>June 21, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Hiring the right people is one of the most important decisions you make at an early stage startup. Here is how we did it at Merchstack</p>
+<p>When I started at Merchstack one of the first documents I wrote was “How We Hire”. At a small company each hire is a critical decision, and one bad decision can knock you off course. How we hire would also set the tone for how we treat employees, and also how we see our relationship with employees. Were we actually working together in the best interests of everyone, or just extracting the most value possible for the least amount of money?</p>
+<ul>
+<li>We have a 6 week SLA for each candidate. They are either hired or moved out of the process within those 6 weeks and notified immediately via email. No candidate should go more than 2 weeks without hearing from us, and everybody hears from us if they submitted a resume. If we can’t meet this SLA than we need to halt the process and review</li>
+<li>We minimize the number of steps in the process so that the time commitment we ask each candidate to make is reasonable</li>
+<li>Our interview process should be a reasonable discussion between peers, not a hazing process where the interviewer shows how smart they are</li>
+<li>If we can’t find the right person, we don’t hire. We step back and reevaluate our approach and the position</li>
+<li>We proactively hire for diversity. Diversity of thought comes from diversity of team</li>
+</ul>
+<p>Our Hiring Pipeline</p>
+<p>Building this pipeline is a compromise between getting the most information about a candidate and being reasonable about your time constraints for both the candidate and the hiring team, who often have a full set of other duties. This pipeline worked pretty well for us as a pretty small company building their initial dev team. If we were larger and had an established team we might add another stage for a team interview or a leadership team interview for more senior positions.</p>
+<p>Step 1: Job Posting Because our job was remote on a distributed team we focused on boards for remote workers. I feel like this helped minimize the resume spam we got and found people who were looking specifically for remote positions. Our link from these sites went to a form built in Airtable that had a few qualifying questions including uploading their resume, years of experience with NodeJS, etc and built out an Airtable with each candidate and their current status set to “submitted”.</p>
+<p>Step 2: Resume screening: Both our CEO and I would go through each resume and give a thumbs up or down without seeing the other persons vote. Resume screening is by far the most difficult task because honestly, so many resumes are awful and the way people write on resume is sometimes intentionally opaque. It is often difficult to really ascertain what they did at any particular job.</p>
+<p>Candidates who got two thumbs up moved to the next stage. We also had a field here called “key candidate” who would get top priority for scheduling and an “express lane” route through the process because they seemed exceptionally well qualified. This paid off well a couple of times.</p>
+<p>Step 3: Initial Screen This would be a short, 15–20 minute casual chat where I would explain the role, describe the company and what it was about etc, and try to get a feel for the candidates approach and experience. The things I was looking for were:</p>
+<ul>
+<li>Did they show up?</li>
+<li>Did they show up on time and prepared?</li>
+<li>English proficiency (as we hire mostly from SouthEast Asia this was important)</li>
+<li>Their general demeanor Honestly the number of candidates I rejected during this phase was pretty small. I think my 3 or 4 people I reject because they were either completely uninterested or openly hostile during this initial call. It did help me identify some “key candidates” at this stage as well. (hint: good developers often have terrible resumes)</li>
+</ul>
+<p>Step 4: Code Screen</p>
+<p>We need some way of screening people out who were just completely unqualified because, honestly a lot of people either overestimate their own abilities, or they are outright lying. We chose a coding assessment platform and built custom assessments for each role.</p>
+<p>We tried to make sure that the assessment was able to be completed by someone who knew what they were doing in 1 hour. The tough part about these is that people who completely failed, it was easy to just reject. And there was a lot, probably only about a third of candidates completed what I thought was a pretty easy assessment. Or they just never tried.</p>
+<p>People who had sort of middling or good scores, you really needed to dig into their code and look at their answers. Some people wrote solutions that technically “worked” but the code was tangled and impossible to read. You could not just assume that because they got really high scores that they were more technically talented. But generally I think this stage did it’s job pretty well, and did not take hours of my time wasted on people who were clearly not qualified.</p>
+<p>Step 5: Pair Programming Exercise/Story Time Interview</p>
+<p>This was the real crucial part and the next to last stage. I created an exercise based on a problem I had worked on in the past for Reaction Commerce where the developer who worked on it had some up with a pretty elegant solution. It was a real world problem but it had a pretty narrow focus so it was something I thought we could work through in an hour.</p>
+<p>The key parts here are twofold:</p>
+<ol>
+<li>Understand the persons thinking process and ability to both understand the problem and communicate their solution to it.</li>
+<li>Their ability to turn that solution into working code.</li>
+</ol>
+<p>This was the most illuminating stage in terms of technical skill and communication skill. Some people struggled to understand the problem, some people struggled to articulate their answer. Rarely people struggled people to turn their answer into code. But was the code any good? Again some people produced messy, repetitive, difficult-to-read code that might have worked but would have been a horror to maintain.</p>
+<p>People who shined in this pair programming interview always turned out to be great coders.</p>
+<p>The other part of this same interview was the “Story Time” questions. Some examples of these are:</p>
+<ul>
+<li>There is a bug in production. What are your steps to try and ascertain the cause?</li>
+<li>Customers are reporting that a particular endpoint is slow. What steps do you take to figure out why?</li>
+<li>Another developer made comments on your PR calling your solution “stupid”. How do you deal with that?</li>
+</ul>
+<p>These were more about trying to understand how they would be at the non-coding parts of the job. What sort of person were they? Arrogant and confrontational? Timid?</p>
+<p>One of my favorites that I tended to save for last was: “There is a bug in production that is causing the entire site to crash. You understand the problem and think you have a fix. However you boss is out of town and you can’t reach him and he has left explicit instructions to not push anything to production while he is gone. What do you?”</p>
+<p>Of course the only wrong answers to this are immediately say “push a fix” or “don’t do anything” without giving it any thought. There are so many courses of action here: Try and seek out your bosses boss. Get advice or consensus from more senior developers. Does your fix have an easy rollback plan, etc etc.</p>
+<p>Step 5: The CEO interview</p>
+<p>This was obviously the only part of the interview process that I was not involved in. This was the final “vibe check”, and was more used to choose between two equally qualified candidates.</p>
+<p>Step 6: Make an Offer</p>
+<p>In the next part, I will talk a bit more about the tools we used to try and keep costs low while also excelling at managing the process.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">The Empath Project</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

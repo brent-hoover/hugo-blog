@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Distributed Async Manifesto | The Empath Project</title>
+<meta name="keywords" content="">
+<meta name="description" content="I have been managing globally distributed remote-only teams for almost a decade now, so when Covid hit, we barely noticed. But that doesn’t mean that distributed async doesn’t have its challenges. I have tried to distill what has worked into what I call the Distributed Async Manifesto. Like the Agile Manifesto it tries to be brief, simple, and memorable, with some elaboration on each of the key points. Check it out below:">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/the-distributed-async-manifesto/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/the-distributed-async-manifesto/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="The Empath Project (Alt + H)">The Empath Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Distributed Async Manifesto
+    </h1>
+    <div class="post-meta"><span title='2024-06-21 12:35:54 +0000 UTC'>June 21, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I have been managing globally distributed remote-only teams for almost a decade now, so when Covid hit, we barely noticed. But that doesn’t mean that distributed async doesn’t have its challenges. I have tried to distill what has worked into what I call the Distributed Async Manifesto. Like the Agile Manifesto it tries to be brief, simple, and memorable, with some elaboration on each of the key points. Check it out below:</p>
+<p>The Manifesto</p>
+<p>While we largely believe in the tenets laid out in the original Agile Manifesto, we believe that the challenges that distributed async work provides require some different ways of working</p>
+<p>We favor:</p>
+<ul>
+<li>Proactive communication over standups or check-ins or back-and-forth dialogue</li>
+<li>A culture of documentation over tribal knowledge or subject matter gurus</li>
+<li>Empowered accountability over Project Management</li>
+<li>Collaboration over Individual achievement</li>
+<li>Like the original Agile Manifesto, it’s not because we do not think the things on the right have no value, but we believe the things on the left have more value.</li>
+</ul>
+<p>Proactive communication</p>
+<p>When working remote it’s very easy to get in a reactive “pull” mindset. You wake up, you respond to the slack messages you are tagged in, you review the PR’s you are requested on and then move on to your tickets. This is fine as far as it goes. But to move to the next level of remote work we need to move to a “push” model. This breaks down into two main points:</p>
+<p>Make Work Visible</p>
+<p>This is probably the most important and the most difficult change people need to make. It involves asking yourself every day “if anybody wanted to know what is the status of the stuff I am working on, would they be able to know without asking me?”. If there is one non-coding skill to develop when working remote that will reap dividends in your career, it’s learning to do this. Making your work visible can take many forms: creating a PR, a comment on Jira ticket, a message in a slack channel. It’s really up to you to every day decide what makes sense and is the most natural, but you need to be doing it and doing it every day. If someone needs to ask “what’s the status of this ticket/work/PR, etc” we’ve already lost and you’ve made more work for everyone.</p>
+<p>Ask questions so that there can be no follow-up questions</p>
+<p>Sometimes it’s necessary to ask a teammate a question in a ticket or in slack. When you ask these questions “ask so that there can be no follow up questions”. Include any context for the question that you can including things like:</p>
+<ul>
+<li>Why are you asking this question?</li>
+<li>What are you trying to accomplish?</li>
+<li>What problems are you running into?</li>
+<li>What have you already tried?</li>
+<li>What error messages are you getting if any?</li>
+<li>What environment is this in?</li>
+</ul>
+<p>Try to include everything the person you are asking might want to know so that they don’t need to ask you for any more info, thus creating another cycle of back and forth. This might not always be possible, but if the person comes back with questions for you that you already knew the answer to, that is on you.</p>
+<p>Public channels over private channels</p>
+<p>This is mostly about slack channels but it also applies to putting conversations in Jira tickets, etc. If you have a question or problem, other people may also have the same question or problem so make sure that you make it public in one way or another. If you need help from someone on a ticket, put that in the ticket rather than dm’ing them and then follow up with a dm. Ensure that everyone benefits from the knowledge transfer. And then once you have the answer, see if this is something that needs to be documented.</p>
+<p>A Culture of Documentation</p>
+<p>Breaking Down Documentation</p>
+<p>Documentation is basically our go-to for anything we write down that others can access, learn from, and expand on. You’re checking out some documentation right now! In a nutshell, a big chunk of remote work is all about diving into and dishing out the written word.</p>
+<p>The Lowdown on a Documentation Culture</p>
+<p>When we talk about a culture of documentation, we’re saying that it’s a team sport — we all have to play our part in capturing and sharing the key info. It’s crucial for keeping our collective knowledge base not just alive but thriving. We aim for our documentation to be super useful, clean, and up-to-date. If something’s off, we jump in to correct it. If we’re missing a piece of the puzzle, we add it pronto. And let’s not forget, we’re all in different time zones. The person you might want to ask could be out for the night when you’re in crunch mode. Good documentation keeps the show running smoothly.</p>
+<p>Committing to a Culture of Documentation also means we’re cutting down on noise. In our world, ‘noise’ is the kind of distraction that interrupts your workflow and demands an immediate response. That’s not what we want. It messes with deep, focused work. So, the motto goes something like this: “Hit up the search bar first, then ask away…”. Our digital tools are decked out with search features. If your treasure hunt comes up empty, that’s when you reach out for help. Let us know what you’re after and where you’ve already looked. Just remember, if the gold you find could be treasure for someone else too, you’re the one who’s got to map it out in our docs.</p>
+<p>Empowered Accountability</p>
+<p>As an agile team we should be self-organising and self-managing.</p>
+<p>Self-organising means that within the team we work together to agree who is doing what and how you will break down and prioritise the work as well as committing to iterations of value to be delivered each sprint. We are empowered — individually and as a team — to make decisions on what we do, when and how we do it. This gives immense freedom to you and your team which should enable you to work at your best. You are closest to the work and therefore best informed about what the issues are and how to solve them.</p>
+<p>Self-managing means that individually and as a team we hold each other to account for the shared responsibility of delivering the committed value (including contractual obligations). This is the responsibility that comes with the freedoms and privileges of empowerment.</p>
+<p>One of the reasons for the other tenets of the manifesto is that they prioritise transparent and proactive communication. This is essential for you as an empowered individual or team to make informed decisions which will result in the best value for the customer, the company, your team and yourself. That value results in a sustainable and profitable business with happy customers, effective teams and individuals who are supported to continually improve. This is ultimately why we come to work each day — to deliver value that helps the company grow, pays salaries and provides benefits for us and our colleagues.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">The Empath Project</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Building and Documenting Team Culture using the VAARPS Framework | The Empath Project</title>
+<meta name="keywords" content="">
+<meta name="description" content="Culture makes or breaks engineering teams. Period. More than process, tools, or talent, culture determines whether a team will excel or implode. Yet most &ldquo;culture initiatives&rdquo; amount to meaningless platitudes that teams promptly ignore.
+Here&rsquo;s the thing: culture will form whether you shape it or not. The choice is between deliberately crafting it or letting it grow like weeds. Most teams end up with something like this:
+“At Synergistic Solutions International, we strive to leverage cutting-edge innovation to deliver best-in-class, customer-centric solutions while empowering stakeholder value through dynamic paradigm shifts in our quest for excellence.”">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/building-and-documenting-team-culture-using-the-vaarps-framework/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/building-and-documenting-team-culture-using-the-vaarps-framework/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="The Empath Project (Alt + H)">The Empath Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Building and Documenting Team Culture using the VAARPS Framework
+    </h1>
+    <div class="post-meta"><span title='2024-11-14 04:48:42 +0000 UTC'>November 14, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Culture makes or breaks engineering teams. Period. More than process, tools, or talent, culture determines whether a team will excel or implode. Yet most &ldquo;culture initiatives&rdquo; amount to meaningless platitudes that teams promptly ignore.</p>
+<p>Here&rsquo;s the thing: culture will form whether you shape it or not. The choice is between deliberately crafting it or letting it grow like weeds. Most teams end up with something like this:</p>
+<p>“At Synergistic Solutions International, we strive to leverage cutting-edge innovation to deliver best-in-class, customer-centric solutions while empowering stakeholder value through dynamic paradigm shifts in our quest for excellence.”</p>
+<p>No matter how invested you are in Synergistic Solutions International&rsquo;s future, your reaction will likely be, “Hmm, okay.” This statement is meaningless because it doesn’t tell you how to behave to fulfill this mission statement other than that you should “leverage cutting-edge innovation.”, whatever that means.</p>
+<p>For a long time, I have built “Values” documents with my team, and honestly, the reaction I often get is collective shrug.</p>
+<p>Honestly, my main influence on wanting to put these together in the first place was The Zen of Python. If you are not familiar with it, you can go into a Python REPL and type “import this,” and you will get this series of zen-like statements like “Flat is Better than Nested” and “In the face of ambiguity, refuse the temptation to guess.” (my personal favorite)</p>
+<p>I like that this is a set of values that every Python programmer should adhere to. It starts with things so obvious that it’s a little confusing and gradually moves towards things that might be controversial if such controversy hadn’t already been addressed here. If we have an argument about how some data should be laid out, I can point out that the Zen of Python says, “Flat is better than Nested,” and that’s sort of that.</p>
+<p>This is exactly what I was trying to achieve with team values statements—principles that are clear enough to reference in day-to-day decisions (&ldquo;flat is better than nested&rdquo;) but flexible enough to guide behavior without being overly prescriptive. Most importantly, they become part of the team&rsquo;s working vocabulary, something you can actually point to when making decisions. Unfortunately, most value statements I created were read once and never referenced again, unlike the Zen of Python, which developers actively use to guide their choices.</p>
+<p>So how do we create values that actually matter? Values that people reference instead of ignore? Values that shape decisions instead of collecting dust?</p>
+<p>Let&rsquo;s cut through the fluff and break down what culture actually is. It&rsquo;s not just values written on a wall - it&rsquo;s how those values translate into:</p>
+<ul>
+<li>Behaviors (which I call Actions and Anti-Patterns for things you should and should not do)</li>
+<li>Rituals</li>
+<li>Power Dynamics</li>
+<li>Symbols and Success Metrics</li>
+</ul>
+<p>Sounds academic? It&rsquo;s not. These elements shape everything we do, usually without us even noticing. But in engineering teams, we can&rsquo;t afford to let culture develop by accident. When someone says, &ldquo;We have a culture of collaboration,&rdquo; that should mean something specific. Are we talking about pair programming? Code reviews? Knowledge sharing? Let&rsquo;s make it concrete.</p>
+<p>So, let’s walk through something using a couple of examples. Let’s start with this, which is something from the values statement from my last company:</p>
+<p>Collaboration</p>
+<p>Value Statement:</p>
+<ul>
+<li>When you need help, you seek it</li>
+<li>When you can help, you offer it</li>
+<li>No one is ever in this alone</li>
+<li>We succeed or fail as a team</li>
+</ul>
+<p>Nice words. Completely useless. If I told you to &ldquo;embody collaboration&rdquo; today, would you have any idea what to actually do differently? So that takes us to the next steps of the VAARPS framework; we have our Values, and now let’s define the Behaviors. Let’s start with the Actions, things we should start DOING if we are not already. So for the collaboration values, we might put something like the following:</p>
+<p>Actions:</p>
+<ul>
+<li>Participating in code reviews within 24 hours</li>
+<li>Joining pair programming sessions when asked</li>
+<li>Blocking time for mentoring sessions</li>
+<li>Sharing meeting notes in designated channels</li>
+<li>Creating documentation when you discover something new (even just a quick Loom)</li>
+<li>Asking for help when you get stuck</li>
+</ul>
+<p>This isn&rsquo;t a complete list, but it makes things concrete.</p>
+<p>Now we&rsquo;re getting somewhere. To align with these values, you need to do these things. (if you don’t agree with these particular things, that’s fine; you and your team should build them together)</p>
+<p>Those are things you should do, now for some things you should not do:</p>
+<p>Anti-patterns:</p>
+<ul>
+<li>Working in isolation for extended periods</li>
+<li>Hoarding knowledge that could benefit others</li>
+<li>Declining reasonable requests for help without explanation</li>
+</ul>
+<p>I like these because often, what we should not do is more important than what we should do, and the latter will often be obvious. For example, “Working in isolation for extended periods” seems to make more sense to junior developers than the affirmative “Asking for help when you get stuck,” which feels like a sign of weakness or ignorance.</p>
+<p>So far, we have mostly focused on individual actions. Rituals are where we begin to embody this as a group. An example here for the collaboration values:</p>
+<p>Rituals:</p>
+<ul>
+<li>Weekly pair programming rotations</li>
+<li>Regular knowledge-sharing sessions</li>
+<li>&ldquo;Open Office Hours&rdquo; where seniors block time for questions</li>
+<li>Cross-team code review days</li>
+<li>Regular mob programming sessions for complex problems</li>
+</ul>
+<p>So now we have established some more collective and concrete things so everyone can see and be aware of what is happening. A new employee coming in will see these as examples of our culture of collaboration without ever reading this document. Hopefully, this idea will begin to weave itself into the culture.</p>
+<p>Culture dies when leadership says one thing but rewards another. Power Dynamics make or break your cultural aspirations:</p>
+<p>Power Dynamics:</p>
+<ul>
+<li>Technical decisions are made through consensus rather than authority</li>
+<li>Recognition and influence earned through helping others</li>
+<li>Senior engineers are measured partly by team enablement and success</li>
+<li>Leadership is shown through mentorship rather than direction</li>
+</ul>
+<p>There is an element of putting our money where our mouth is here. Something like “Senior engineers are measured partly by team enablement” means that we need to build that into our performance evaluations and ensure that we actually reward individuals for contributing to the collective rather than just for what we personally produce.</p>
+<p>So that brings us to the last letter in our acronyms, S for Symbols and Success Metrics. Symbols are the outward, non-behavior representations of these values, while Success Metrics are the way that we will measure if we are actually living our values. While measurement is important, we have to be careful not to reduce culture to just numbers. Some aspects can be measured directly; others might just be trends we observe. The goal is to have enough measurement to know we&rsquo;re on track, without turning values into mere metrics to be gamed.</p>
+<p>Symbols:</p>
+<ul>
+<li>Shared team calendar showing availability for pairing</li>
+<li>Public kudos channel for helping others</li>
+<li>Collaboration metrics in team dashboards</li>
+<li>Shared documentation spaces</li>
+<li>Team chat channels organized around knowledge-sharing</li>
+</ul>
+<p>Success Metrics:</p>
+<ul>
+<li>Direct measures:
+<ul>
+<li>PR review response times (target: 80% within 24 hours)</li>
+<li>Number of pairing sessions per sprint</li>
+</ul>
+</li>
+<li>Behavioral indicators:
+<ul>
+<li>% of complex problems solved collaboratively</li>
+<li>Knowledge-sharing session participation</li>
+</ul>
+</li>
+<li>Feedback measures:
+<ul>
+<li>Team survey results about collaboration support</li>
+<li>New team member time to full participation</li>
+</ul>
+</li>
+</ul>
+<p>Some metrics give you hard numbers. Others reveal patterns. Both matter, but don&rsquo;t fall into the trap of only valuing what you can count. Some might be a little more vague, like “% of complex problems solved collaboratively,” which might just be an observed trend toward collaboratively solving problems. The trick here is not to get too bogged down in trying to put a ton of numbers around it because culture should generally be something you do without thinking. Otherwise, they are just rules.</p>
+<p>So there is one other element of culture that I have intentionally left out of the Framework acronym because you will not have it to start, and that is:</p>
+<p>Collective Stories &amp; Language. These things evolve over time and emerge from the experiences of the people who build/create the culture every day with their behavior. Some examples are:</p>
+<ul>
+<li>&ldquo;War stories&rdquo; of significant incidents and how they were handled</li>
+<li>Case studies of major successes/failures</li>
+<li>Common terminology glossary</li>
+<li>Team inside jokes or references</li>
+<li>Origin stories of why certain decisions were made</li>
+</ul>
+<p>This is something that you can document later on and add to the document, but you are just not going to have them on day one, so you can’t “Build” the document with it.</p>
+<p>So to hopefully make this easier to understand, here is another fully built-out example:</p>
+<p>Quality</p>
+<p>Value Statement:</p>
+<ul>
+<li>We value simplicity over trying to solve every problem preemptively</li>
+<li>Nothing is complete until it has tests and documentation</li>
+<li>We favor readability over terseness/cleverness</li>
+</ul>
+<p>Actions:</p>
+<ul>
+<li>Including test coverage with all pull requests</li>
+<li>Documenting architecture decisions in ADRs</li>
+<li>Reviewing code for performance implications</li>
+<li>Tracking and regularly addressing technical debt</li>
+<li>Updating documentation alongside code changes</li>
+</ul>
+<p>Anti-patterns:</p>
+<ul>
+<li>Merging code without tests</li>
+<li>Adding features without documentation</li>
+<li>Implementing overly complex solutions without clear benefits</li>
+</ul>
+<p>Rituals:</p>
+<ul>
+<li>Regular code quality reviews</li>
+<li>Technical debt review sessions</li>
+<li>Architecture Working Group</li>
+<li>Performance testing ceremonies</li>
+<li>Documentation sprints</li>
+<li>Architecture review meetings</li>
+</ul>
+<p>Power Dynamics:</p>
+<ul>
+<li>Authority to block merges over quality concerns</li>
+<li>Empowerment to spend time on refactoring</li>
+<li>Quality metrics influence technical leadership</li>
+<li>Shared ownership of quality standards</li>
+</ul>
+<p>Symbols:</p>
+<ul>
+<li>Quality dashboards</li>
+<li>Test coverage reports</li>
+<li>Performance monitoring tools</li>
+<li>Architecture decision record templates</li>
+<li>Code quality badges in repositories</li>
+</ul>
+<p>Success Metrics:</p>
+<ul>
+<li>Direct measures:
+<ul>
+<li>Test coverage for new code (target: agreed team threshold)</li>
+<li>Architecture Decision Records completed for major changes</li>
+<li>Time from feature completion to documentation update</li>
+</ul>
+</li>
+<li>Process indicators:
+<ul>
+<li>Ratio of planned refactoring work to feature work</li>
+<li>% of PRs requiring multiple revision rounds (lower is better)</li>
+<li>Technical debt items addressed vs. new ones identified</li>
+</ul>
+</li>
+<li>Outcome measures:
+<ul>
+<li>Production incidents due to missing tests or docs</li>
+<li>Customer-reported bugs in new features</li>
+<li>Team satisfaction with codebase maintainability (surveys)</li>
+</ul>
+</li>
+</ul>
+<p>How to keep this a living document</p>
+<p>Let&rsquo;s be honest - even the best culture document can become shelfware. Here&rsquo;s how to keep it alive and breathing:</p>
+<p>Revisit the Document Regularly</p>
+<p>I think it’s good to revisit the document fairly regularly, especially after you first create it, to determine whether it fits well with your goals. At first, maybe once a quarter, and once you feel that it’s fairly well solidified, maybe just once or twice a year.</p>
+<p>Update the document with your learnings</p>
+<p>It’s pretty unlikely that you created the perfect culture document the first time. So as you learn, make sure that what you learn is part of the document. If a necessary change comes out of a retrospective, see where that change aligns with values and document that Action or Anti-pattern. This keeps your document aligned and the team accountable for putting the findings into practice.</p>
+<p>Tie values alignment into your performance reviews and 1-on-1s</p>
+<p>If your values document is good, keeping aligned with these values should ultimately lead to team and individual success. So perhaps, as part of quarterly reviews on the Developer Roadmap process, you can revisit the values and evaluate how each developer is keeping with these values and possibly identify areas to improve. The success metrics for each value are a good starting point, but we shouldn’t overly weight them here to avoid this becoming a numbers game.</p>
+<p>Conclusion</p>
+<p>As engineers, we like to have things that are concrete and actionable. I feel like the VAARPS framework allows people to work through “creating the culture” with their team in a methodical way where, hopefully, something meaningful and useful comes out of it. If you use this framework, please drop me a line and let me know how it works for you.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">The Empath Project</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

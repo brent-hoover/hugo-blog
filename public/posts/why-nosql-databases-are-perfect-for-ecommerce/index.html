@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Why NoSQL Databases are Perfect for Ecommerce | The Empath Project</title>
+<meta name="keywords" content="">
+<meta name="description" content="People get very passionate about database technologies. There’s nothing more critical than your data, after all. Make the wrong choice, and you could be setting yourself up for failure.
+When it comes to managing data, every database management system (DBMS) has its strengths and weaknesses, and each one is good at some things and not so good at others. So why did we use MongoDB to power Reaction over a more ‘traditional’ MySQL database? I feel like our reasoning grew out of a single core concept: Mongo’s document structure works the same way that ecommerce works.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/why-nosql-databases-are-perfect-for-ecommerce/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/why-nosql-databases-are-perfect-for-ecommerce/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="The Empath Project (Alt + H)">The Empath Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Why NoSQL Databases are Perfect for Ecommerce
+    </h1>
+    <div class="post-meta"><span title='2024-06-21 01:14:29 +0000 UTC'>June 21, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>People get very passionate about database technologies. There’s nothing more critical than your data, after all. Make the wrong choice, and you could be setting yourself up for failure.</p>
+<p>When it comes to managing data, every database management system (DBMS) has its strengths and weaknesses, and each one is good at some things and not so good at others. So why did we use MongoDB to power Reaction over a more ‘traditional’ MySQL database? I feel like our reasoning grew out of a single core concept: Mongo’s document structure works the same way that ecommerce works.</p>
+<p>You might be asking, “So what does this mean, exactly?” In this piece, I’ll explain just that.</p>
+<p>Solving the Impedance Mismatch Problem</p>
+<p>The impedance mismatch problem refers to the inherent challenges of mapping objects to a table within the context of a relational database management system (RDBMS). This is why millions of hours-and dollars-are spent on object relational mappers (ORMs), which allow you to work around the natural mismatched state of RDMS systems.</p>
+<p>What does this mismatch look like? I’ll demonstrate in a couple instances of pseudo-code from each type of system. Here is what getting an order would look like in a typical RDBMS/SQL system:</p>
+<p>SELECT * FROM ORDERS o INNER JOIN ORDER_DETAILS od ON o.ID = od.ID INNER JOIN PAYMENTS p ON p.ORDER_ID = o.ID INNER JOIN SHIPMENTS s ON s.ORDER_ID = o.ID INNER JOIN ACCOUNTS a on o.ACCOUNT_ID = a.ID WHERE o.ID = &lsquo;1234&rsquo;</p>
+<p>This is not a particularly complex layout, but you can already see where things get complicated. You’ll need to understand the layouts of each of these tables (and even know they exist) and be able to carefully stitch together all this data into one cohesive document. Here, each JOIN adds another lookup to another table, adding time and overhead to each request.</p>
+<p>Contrast this with finding an order in Mongo, the database that powers Reaction.</p>
+<p>db.getCollection(&lsquo;Orders&rsquo;).findOne({ _id: &ldquo;RNo7qFZjedma4MqsQ&rdquo; });</p>
+<p>There’s more to Mongo than just making the code simpler and easier to read. The order in which you fetch out of the database is structured around the way it’s conceived in your mind. It represents the order in whatever state it’s in, with all its history and detail. Hence, there’s no “mismatch” between how you deal with data in the application, and how it’s stored in the database.</p>
+<p>Performance Advantages</p>
+<p>Besides this conceptual advantage, there are two real-world advantages that NoSQL brings us: 1) speed and 2) scalability.</p>
+<p>Speed</p>
+<p>Fetching a complete record by a single key (which is how queries are done most of the time) is much, much faster than trying to fetch data from multiple tables. Other systems, such as EAV architecture, have gone to great lengths to get the sort of flexibility you have with Mongo, but at the expense of performance. No joins results in lightning-fast lookups and fetches.</p>
+<p>Scalability</p>
+<p>Because records in Mongo are stored in one discreet entry, it becomes much less difficult to shard databases across however many servers. This simplifies the act of horizontal scaling. With RDBM systems, you have all these discreet tables that need to be kept together, and although sharding with RDBM systems is possible and commonly done, it’s much more complex and usually only allows sharding of certain parts of the database.</p>
+<p>Other Features</p>
+<p>In addition to the advantages listed above, Mongo has many great built-in features, such as:</p>
+<ul>
+<li>Map/reduce, for working over extremely large datasets</li>
+<li>Text search, which we use to power our product search)</li>
+<li>Geo-lookups</li>
+<li>… and so much more!</li>
+</ul>
+<p>And best of all, these features all come straight out of the box.</p>
+<p>But Is It Reliable?</p>
+<p>Most objections about NoSQL usually have to do with the perception that NoSQL databases in general, and Mongo in particular, have problems with reliability, and thus such databases are not suited for ecommerce systems, which thrive on financial transactions. Early adopters of NoSQL had concerns with data security, duplication and atomicity issues, but those issues have been addressed in current versions of MongoDB. In addition, using the Wired Tiger storage engine, which Reaction Commerce uses by default, provides an extra layer of data reliability.</p>
+<p>Although database systems can fail from time to time-all high-availability architectures need to take this into account-when it comes to reliability, Mongo has some distinct advantages around the ease of clustering. Let’s get more into that.</p>
+<p>Redundancy is one of the primary tenants of high availability, and clustering is one of the most common ways to introduce it with databases. It allows your application to see a group of redundant servers-usually in a primary/secondary configuration, where one server is essentially a “hot copy” of the primary server-as one server. No changes to your application or configuration are required, and if there’s a failure with the primary server, the secondary server jumps in and takes over. All of this is transparent to the client.</p>
+<p>If you’ve ever set up a DB cluster using MySQL or Postgres, then you know that setting things up correctly is no small feat. It involves adding several fairly obscure config files and hoping that you’ve selected the correct mode and settings. Clustering in Mongo only requires setting up the servers and issuing some commands on one of them. You can get more specific in your configuration, but most typical primary/secondary configurations only involve specifying which servers are performing which roles. Then, syncing starts immediately.</p>
+<p>What About ACID Compliance?</p>
+<p>ACID (Atomicity, Consistency, Isolation, Durability) is a concept that was originally designed around RDBM systems, so some of these criteria don’t make sense in a document database. For example, atomicity, consistency, and isolation really only apply to the concept of writing an order that is written entirely to all its component tables ( ORDER_DETAIL, ORDER_HEADER, ORDER_HISTORY). However, in a document database, that&rsquo;s the default behavior, since all the data for a particular order is stored within the single order document. The idea of trying to ensure that CASCADEs and TRIGGER s all work correctly does not apply, and the idea of keeping partial updates invisible to other threads doesn&rsquo;t apply, because all updates are applied in one transaction. In addition, Mongo provides atomicity/transactions to this extent:</p>
+<p>In MongoDB, a write operation is atomic on the level of a single document, even if the operation modifies multiple embedded documents within a single document.</p>
+<p>So as long as all your updates are applied in a single write operation, Mongo provides “all or nothing” atomicity. Reaction has ensured that we don’t use JOINs or other cross-collection technique to ensure that transactions are both fast and safe.</p>
+<p>…and Data Integrity?</p>
+<p>Another common concern about NoSQL databases is that there is no “schema” or set of data integrity rules that prevents an errant programmer from writing out information to the data store incorrectly. Schemas catch bugs that could damage data integrity before they can ever reach real data.</p>
+<p>This is a legitimate concern, one which Reaction addresses by using the “ simple-schema” package (which, despite its name, is quite sophisticated). This package is now a standard part of Meteor, but we were early adopters. The simple-schema package allows program authors to define a schema in code and attach it to a Mongo collection at a global level. As a result, all data that is inserted or updated must conform to the schema without any additional effort by other developers. Again, this type of schema avoids the “mismatch” of trying to get tables of data to match with data sets that are naturally nested. It also makes working with the API fluent and intuitive.</p>
+<p>Summary</p>
+<p>While RDBM systems have served us well for many years, a new era of ecommerce requires new tools and techniques. We believe that Mongo provides the speed, scalability, and flexibility necessary to meet the challenges of a hyper-competitive marketplace.</p>
+<p>To access and manage your database, we recommend downloading a simple GUI, like Robo 3T.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">The Empath Project</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Handling Technical Debt in Small Teams | The Empath Project</title>
+<meta name="keywords" content="">
+<meta name="description" content="What is Technical Debt
+In the context of a startup, I would define technical debt as:
+Technical Debt is some aspect of the system that prevents either the system or developers from delivering value to customers in a timely manner
+Types of technical debt:
+
+Developer Experience: These are things that make developing the application more difficult or more time-consuming. Their effects on customers are once-removed: Customers are not directly affected but developers are slowed down and so features or fixes may take longer. An example of this may be that the build system is too slow and takes 15-30 seconds to recompile after every change
+Performance debt: These are items that make the system slow but otherwise don’t affect the features that a customer uses. This might be an inefficient query that can’t be fixed because of the way that the tables are structured or that the db is just too large and needs to be sharded or split in some way. Often it’s not a crisis state but as the db grows it could become one. Unless a customer complains there is often not a ticket open for it.
+Code debt: This is similar but not the same as DX debt. This is messy or poorly structured code that makes devs not want to touch it because it is brittle or because it’s poorly understood. This slows down any work that involves this code and developers will be reluctant to work on this code because they know that it will take them longer than normal and they know they are more likely to introduce bugs which they will be blamed for. Generally this is the most common and most difficult to fix type of debt.
+
+Understanding the impact of technical debt on engineers">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/handling-technical-debt-in-small-teams/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/handling-technical-debt-in-small-teams/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="The Empath Project (Alt + H)">The Empath Project</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Handling Technical Debt in Small Teams
+    </h1>
+    <div class="post-meta"><span title='2024-10-31 11:34:46 +0000 UTC'>October 31, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>What is Technical Debt</p>
+<p>In the context of a startup, I would define technical debt as:</p>
+<p>Technical Debt is some aspect of the system that prevents either the system or developers from delivering value to customers in a timely manner</p>
+<p>Types of technical debt:</p>
+<ol>
+<li>Developer Experience: These are things that make developing the application more difficult or more time-consuming. Their effects on customers are once-removed: Customers are not directly affected but developers are slowed down and so features or fixes may take longer. An example of this may be that the build system is too slow and takes 15-30 seconds to recompile after every change</li>
+<li>Performance debt: These are items that make the system slow but otherwise don’t affect the features that a customer uses. This might be an inefficient query that can’t be fixed because of the way that the tables are structured or that the db is just too large and needs to be sharded or split in some way. Often it’s not a crisis state but as the db grows it could become one. Unless a customer complains there is often not a ticket open for it.</li>
+<li>Code debt: This is similar but not the same as DX debt. This is messy or poorly structured code that makes devs not want to touch it because it is brittle or because it’s poorly understood. This slows down any work that involves this code and developers will be reluctant to work on this code because they know that it will take them longer than normal and they know they are more likely to introduce bugs which they will be blamed for. Generally this is the most common and most difficult to fix type of debt.</li>
+</ol>
+<p>Understanding the impact of technical debt on engineers</p>
+<p>For developers, having a lot of technical debt is much like having a lot of financial debt. Not fixing it can be like just paying the minimum on a credit card with a large balance every month. You work hard only to just keep your head above water and never get ahead.</p>
+<p>If you go too long without ever paying down technical debt, this can lead to developers feeling dissatisfied, that nobody cares about their concerns, and possibly leaving. This is why it’s important to have devs at least understand the decision-making process around what debt gets worked on and when, and get their buy in as much as possible.</p>
+<p>The unique challenge of technical debt on startups</p>
+<p>Handling Technical Debt in small teams at startups can be the most challenging because the demands being placed on the teams to deliver features now can be tremendous. If you are at the stage where you are still trying to find customers you are often told that the next feature is the feature that’s going to bring in all the customers finally, and that nobody is going to care about how messed up the schema is if we run out of money.</p>
+<p>The good news is that this is almost never true.</p>
+<p>However, the truth behind it is that not delivering features and bug fixes is going to have an impact in the 3-6 months to one year timeframe rather than 1-3 year timeframe as it might be at a more established company. You often don’t really have the bandwidth to work on debt if you have unfinished features or significant bugs.</p>
+<p>So what to do?</p>
+<p>Does this mean you just never tackle technical debt and just let it gather, hoping the systems don’t fall over in the meantime?</p>
+<p>The answer isn&rsquo;t straightforward. For a small startup in its first year or two, you need to consider two things: first, examine why you&rsquo;ve accumulated so much technical debt so early, and second, acknowledge that focusing on product-market fit may need to take precedence over debt reduction until you have traction.</p>
+<p>Is the debt something that affects customers like performance debt, then it’s not really technical debt, it’s a bug that should be treated like a bug.</p>
+<p>Catalog and Prioritize</p>
+<p>What you can do in the meantime is catalog and prioritize. When a significant bit of technical debt surfaces, someone should be tasked with documenting it, then the team should be asked to give it a priority or urgency score. Developers will be tempted to make everything urgent but it should be emphasized that these are only for deciding which things will be worked on not whether they will be worked on. Making everything high priority just means the wrong decisions will be made about which things to work on.</p>
+<p>Approach One: Tech Debt Sprint</p>
+<p>I am using the term sprint here but it can be any defined timeframe. Two weeks is a good amount of time though to get some actual work done but not too significantly digress from making product progress. But it could be a month or whatever. The important thing is that the team knows that they have this specific amount of time to work on tech debt but that tasks that are partially finished will not be carried over, so they should try to pick things that they have a very high chance of being able to finish. This tends to make the team think long and hard about what is going to give them the most value since they are doing the work for themselves rather than sometimes mythical “customer”.</p>
+<p>Rinse and Repeat</p>
+<p>One of the jobs of an Engineering Leader is to understand this tech debt well and understand what tradeoffs are happening and make sure everyone (both Product teams and Dev teams) understands it as well. The best situation is where there is a mutual empathy between product and dev teams where everyone understands why everyone wants what they want so compromises can be made where everyone feels heard.</p>
+<p>When is it a good time to have a tech-debt sprint? I think after there has been a major feature push this is a good time to give the team some “me” time.</p>
+<p>How do you know it’s been a successful tech debt sprint? Much like a regular sprint in that all the work that has been committed to, got completed. Generally I would like to see 1 or 2 “high priority” items finished in a tech debt sprint plus a couple more lower priority ones. This isn’t always possible because high priority items can often be something that can’t be finished in a single sprint. What do you do with these? I will cover that in the next approach.</p>
+<p>Approach Two: Debt Reduction as a Feature</p>
+<p>This approach is a lot more challenging. Trying to get the business to sign off on doing a significant chunk of work that won’t have immediate direct consequences is going to be a challenge and rightly so.</p>
+<p>However, if the debt meets our definition of debt in that it affects delivering value, you will need to make a case to the business that you will deliver more work faster if you can remove this impediment.</p>
+<p>To illustrate how to make a compelling business case for technical debt reduction, let&rsquo;s examine a common scenario involving build system performance. This example demonstrates how to quantify the impact of technical debt and present a clear path to resolution.</p>
+<p>Example: Build System Performance Impact</p>
+<p>Our build system currently takes 30 seconds to compile and reload after each code change. Developers make an average of 50 changes per day while developing features.</p>
+<p>Impact Analysis</p>
+<ul>
+<li>30 seconds waiting time per code change</li>
+<li>50 changes per day</li>
+<li>Total daily wait time: 25 minutes per developer</li>
+<li>For a team of 5 developers: 125 minutes (2.08 hours) of total team wait time per day</li>
+<li>Monthly impact: ~42 hours of developer wait time</li>
+<li>At an average fully-loaded developer cost of $100/hour: $4,200 in lost productivity per month</li>
+</ul>
+<p>Proposed Solution</p>
+<p>Invest 3 weeks of one developer&rsquo;s time to:</p>
+<ol>
+<li>Implement incremental compilation</li>
+<li>Optimize build caching</li>
+<li>Update build configuration for parallel processing</li>
+<li>Implement distributed build system</li>
+<li>Create comprehensive test suite for build system</li>
+</ol>
+<p>Expected Results:</p>
+<ul>
+<li>Reduce build time from 30 seconds to 5 seconds</li>
+<li>New monthly wait time: 7 hours (vs current 42 hours)</li>
+<li>Monthly savings: 35 hours of developer time</li>
+<li>Financial impact: $3,500 saved per month</li>
+</ul>
+<p>Return on Investment</p>
+<ul>
+<li>Investment: 3 weeks of developer time = $12,000 (120 hours × $100/hr)</li>
+<li>Monthly savings: $3,500</li>
+<li>Break-even point: ~3.4 months</li>
+<li>Annual savings after break-even: $42,000</li>
+</ul>
+<p>Additional Benefits</p>
+<ol>
+<li>Improved Developer Experience
+<ul>
+<li>Reduced context switching</li>
+<li>Higher job satisfaction</li>
+<li>Better retention</li>
+</ul>
+</li>
+<li>Faster Feature Delivery
+<ul>
+<li>More time spent on actual development</li>
+<li>Quicker iterations on bug fixes</li>
+<li>Faster customer feedback cycles</li>
+</ul>
+</li>
+<li>Better Quality
+<ul>
+<li>Developers more likely to make small, incremental changes</li>
+<li>More willing to refactor when needed</li>
+<li>Increased test coverage due to faster test runs</li>
+</ul>
+</li>
+</ol>
+<p>Implementation Plan</p>
+<ol>
+<li>Week 1:
+<ul>
+<li>Profile current build system</li>
+<li>Implement incremental compilation</li>
+<li>Initial build caching setup</li>
+</ul>
+</li>
+<li>Week 2:
+<ul>
+<li>Complete build caching optimization</li>
+<li>Implement parallel processing</li>
+<li>Begin distributed build system setup</li>
+</ul>
+</li>
+<li>Week 3:
+<ul>
+<li>Complete distributed build system</li>
+<li>Create comprehensive test suite</li>
+<li>Team training on new system</li>
+<li>Performance validation and tuning</li>
+</ul>
+</li>
+</ol>
+<p>Sprint Considerations</p>
+<p>Given that this work exceeds our standard two-week tech debt sprint window, we have several options:</p>
+<ol>
+<li>Split the work:
+<ul>
+<li>Sprint 1 (2 weeks): Implement core improvements (incremental compilation and caching)</li>
+<li>Future Sprint: Complete distributed build system and testing</li>
+</ul>
+</li>
+<li>Treat as a feature:
+<ul>
+<li>Track this as a performance improvement feature rather than tech debt</li>
+<li>Include in regular sprint planning</li>
+<li>Break into smaller, deliverable chunks</li>
+</ul>
+</li>
+<li>Extended tech debt period:
+<ul>
+<li>Request a one-time extended tech debt period</li>
+<li>Justify based on ROI and team impact</li>
+</ul>
+</li>
+</ol>
+<p>Success Metrics</p>
+<p>We will track:</p>
+<ol>
+<li>Average build times</li>
+<li>Developer productivity (stories completed per sprint)</li>
+<li>Team satisfaction scores</li>
+<li>Time to market for new features</li>
+</ol>
+<p>Risk Mitigation</p>
+<ul>
+<li>Phased rollout to catch issues early</li>
+<li>Keep old build system as fallback</li>
+<li>Daily progress updates to stakeholders</li>
+<li>Clear rollback plan if issues arise</li>
+</ul>
+<p>This approach takes a lot more work but you need to make the case that this is going to either make or save us real money or there is no reason the business should sign off on it.</p>
+<p>Final Thoughts</p>
+<p>Managing tech debt involves weaving together both a strong technical understanding of the underpinnings of the system and also an understanding of what motivates both the business and developers. Success comes from finding the right balance between three key factors:</p>
+<ol>
+<li>Timing and Prioritization
+<ul>
+<li>Not all tech debt needs to be addressed immediately</li>
+<li>Focus on debt that actively impedes value delivery</li>
+<li>Use the cataloging system to make informed decisions</li>
+<li>Choose the right approach (sprint vs. feature) based on scope and impact</li>
+</ul>
+</li>
+<li>Communication and Transparency
+<ul>
+<li>Keep both technical and business stakeholders informed about the state of tech debt</li>
+<li>Use data and metrics to illustrate impact</li>
+<li>Build mutual empathy between product and engineering teams</li>
+<li>Make the cost of delay visible without creating unnecessary alarm</li>
+</ul>
+</li>
+<li>Sustainable Progress
+<ul>
+<li>Regular small improvements through tech debt sprints</li>
+<li>Strategic larger investments when ROI justifies it</li>
+<li>Monitor the effectiveness of debt reduction efforts</li>
+<li>Adjust approaches based on results and team feedback</li>
+</ul>
+</li>
+</ol>
+<p>Remember that technical debt isn&rsquo;t inherently bad—it&rsquo;s often a byproduct of moving quickly and making pragmatic choices. The goal isn&rsquo;t to eliminate all debt but to manage it effectively. By maintaining this balanced approach, you can move both the product and the system forward together, keeping your team productive and your business competitive.</p>
+<p>The most successful tech debt management strategies are those that become part of your engineering culture rather than one-off initiatives. When developers feel heard, the business sees value, and customers benefit from improved delivery speed, you&rsquo;ve found the sweet spot in technical debt management.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">The Empath Project</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
