@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>The Empath Project</title>
+    <title>The Empathy Project</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on The Empath Project</description>
+    <description>Recent content on The Empathy Project</description>
     <generator>Hugo -- 0.153.4</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Dec 2024 09:30:52 +0000</lastBuildDate>

@@ -2,7 +2,6 @@
 date = 2024-06-21T01:14:29Z
 description = ""
 draft = false
-image = "__GHOST_URL__/content/images/2024/06/why_nosql_for_ecommerce_header.webp"
 slug = "why-nosql-databases-are-perfect-for-ecommerce"
 title = "Why NoSQL Databases are Perfect for Ecommerce"
 

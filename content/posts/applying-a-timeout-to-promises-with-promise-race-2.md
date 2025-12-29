@@ -2,7 +2,6 @@
 date = 2024-06-21T12:52:57Z
 description = ""
 draft = true
-image = "__GHOST_URL__/content/images/2024/06/race.webp"
 slug = "applying-a-timeout-to-promises-with-promise-race-2"
 title = "Applying a Timeout to Promises with Promise.race()"
 

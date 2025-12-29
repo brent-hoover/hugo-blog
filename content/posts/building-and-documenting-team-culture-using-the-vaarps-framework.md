@@ -2,7 +2,6 @@
 date = 2024-11-14T04:48:42Z
 description = ""
 draft = false
-image = "__GHOST_URL__/content/images/2024/11/vaarps.png"
 slug = "building-and-documenting-team-culture-using-the-vaarps-framework"
 title = "Building and Documenting Team Culture using the VAARPS Framework"
 

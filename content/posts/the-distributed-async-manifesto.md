@@ -2,7 +2,6 @@
 date = 2024-06-21T12:35:54Z
 description = ""
 draft = false
-image = "__GHOST_URL__/content/images/2024/06/async_manifesto.webp"
 slug = "the-distributed-async-manifesto"
 title = "The Distributed Async Manifesto"
 

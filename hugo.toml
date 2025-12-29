@@ -1,4 +1,6 @@
 baseURL = 'https://brenthoover.com/'
 languageCode = 'en-us'
-title = 'The Empath Project'
+title = 'The Empathy Project'
 theme = 'PaperMod'
+[params]
+    disableSpecial1stPost = true

@@ -2,7 +2,6 @@
 date = 2024-10-31T11:34:46Z
 description = ""
 draft = false
-image = "__GHOST_URL__/content/images/2024/10/debt.jpg"
 slug = "handling-technical-debt-in-small-teams"
 title = "Handling Technical Debt in Small Teams"
 
