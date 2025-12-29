@@ -1,0 +1,20 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "The Empathy Project"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  # logo = ""
+  # description = ""
+
+# [params.author]
+#   name = ""
+#   email = ""
+#   image = ""
+#   headline = ""
+#   bio = ""
+#   links = []

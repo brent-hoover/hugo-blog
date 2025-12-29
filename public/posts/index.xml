@@ -1,87 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on The Empathy Project</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on The Empathy Project</description>
-    <generator>Hugo -- 0.153.4</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 03 Dec 2024 09:30:52 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Tue, 03 Dec 2024 09:30:52 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Developer Roadmaps: Building Better Engineering Careers</title>
       <link>http://localhost:1313/posts/developer-roadmaps-building-better-engineering-careers/</link>
       <pubDate>Tue, 03 Dec 2024 09:30:52 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/developer-roadmaps-building-better-engineering-careers/</guid>
-      <description>&lt;p&gt;Part 1 - The Problem with Engineer Growth&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;What do I need to do to get promoted?&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;This is probably the most common question I&amp;rsquo;ve received as an engineering manager. It seems like there should be a straightforward answer - after all, most companies have career ladders that spell out the requirements for each level. Yet engineers often struggle to translate these requirements into actual actions they can take.&lt;/p&gt;
-&lt;p&gt;The problem isn&amp;rsquo;t just about promotions either. Throughout my career, I&amp;rsquo;ve noticed patterns that make engineering career development particularly challenging:&lt;/p&gt;</description>
+      <description>Part 1 - The Problem with Engineer Growth
+“What do I need to do to get promoted?”
+This is probably the most common question I’ve received as an engineering manager. It seems like there should be a straightforward answer - after all, most companies have career ladders that spell out the requirements for each level. Yet engineers often struggle to translate these requirements into actual actions they can take.
+</description>
+      
     </item>
+    
     <item>
       <title>Building and Documenting Team Culture using the VAARPS Framework</title>
       <link>http://localhost:1313/posts/building-and-documenting-team-culture-using-the-vaarps-framework/</link>
       <pubDate>Thu, 14 Nov 2024 04:48:42 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/building-and-documenting-team-culture-using-the-vaarps-framework/</guid>
-      <description>&lt;p&gt;Culture makes or breaks engineering teams. Period. More than process, tools, or talent, culture determines whether a team will excel or implode. Yet most &amp;ldquo;culture initiatives&amp;rdquo; amount to meaningless platitudes that teams promptly ignore.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the thing: culture will form whether you shape it or not. The choice is between deliberately crafting it or letting it grow like weeds. Most teams end up with something like this:&lt;/p&gt;
-&lt;p&gt;“At Synergistic Solutions International, we strive to leverage cutting-edge innovation to deliver best-in-class, customer-centric solutions while empowering stakeholder value through dynamic paradigm shifts in our quest for excellence.”&lt;/p&gt;</description>
+      <description>Culture makes or breaks engineering teams. Period. More than process, tools, or talent, culture determines whether a team will excel or implode. Yet most “culture initiatives” amount to meaningless platitudes that teams promptly ignore.
+</description>
+      
     </item>
+    
     <item>
       <title>Handling Technical Debt in Small Teams</title>
       <link>http://localhost:1313/posts/handling-technical-debt-in-small-teams/</link>
       <pubDate>Thu, 31 Oct 2024 11:34:46 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/handling-technical-debt-in-small-teams/</guid>
-      <description>&lt;p&gt;What is Technical Debt&lt;/p&gt;
-&lt;p&gt;In the context of a startup, I would define technical debt as:&lt;/p&gt;
-&lt;p&gt;Technical Debt is some aspect of the system that prevents either the system or developers from delivering value to customers in a timely manner&lt;/p&gt;
-&lt;p&gt;Types of technical debt:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Developer Experience: These are things that make developing the application more difficult or more time-consuming. Their effects on customers are once-removed: Customers are not directly affected but developers are slowed down and so features or fixes may take longer. An example of this may be that the build system is too slow and takes 15-30 seconds to recompile after every change&lt;/li&gt;
-&lt;li&gt;Performance debt: These are items that make the system slow but otherwise don’t affect the features that a customer uses. This might be an inefficient query that can’t be fixed because of the way that the tables are structured or that the db is just too large and needs to be sharded or split in some way. Often it’s not a crisis state but as the db grows it could become one. Unless a customer complains there is often not a ticket open for it.&lt;/li&gt;
-&lt;li&gt;Code debt: This is similar but not the same as DX debt. This is messy or poorly structured code that makes devs not want to touch it because it is brittle or because it’s poorly understood. This slows down any work that involves this code and developers will be reluctant to work on this code because they know that it will take them longer than normal and they know they are more likely to introduce bugs which they will be blamed for. Generally this is the most common and most difficult to fix type of debt.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Understanding the impact of technical debt on engineers&lt;/p&gt;</description>
+      <description>What is Technical Debt
+In the context of a startup, I would define technical debt as:
+Technical Debt is some aspect of the system that prevents either the system or developers from delivering value to customers in a timely manner
+</description>
+      
     </item>
+    
     <item>
       <title>It’s the end of an era</title>
       <link>http://localhost:1313/posts/its-the-end-of-an-era/</link>
       <pubDate>Thu, 26 Sep 2024 03:31:01 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/its-the-end-of-an-era/</guid>
-      <description>&lt;p&gt;The second big tech boom has finally cooled. But I think the future still looks bright.&lt;/p&gt;
-&lt;p&gt;I am old enough and been in tech long enough to see the two major booms come and go. The first of course was the “dotcom” boom. I saw this boom first hand when I worked at Charles Schwab in the late 90’s and the company grew so quickly we had to implement our Disaster Recovery plans just to get enough computers and desks to accomodate all the online trading.&lt;/p&gt;</description>
+      <description>The second big tech boom has finally cooled. But I think the future still looks bright.
+I am old enough and been in tech long enough to see the two major booms come and go. The first of course was the “dotcom” boom. I saw this boom first hand when I worked at Charles Schwab in the late 90’s and the company grew so quickly we had to implement our Disaster Recovery plans just to get enough computers and desks to accomodate all the online trading.
+</description>
+      
     </item>
+    
     <item>
       <title>Doing Developer Hiring Right - Part 1</title>
       <link>http://localhost:1313/posts/doing-developer-hiring-right-part-1/</link>
       <pubDate>Fri, 21 Jun 2024 12:42:08 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/doing-developer-hiring-right-part-1/</guid>
-      <description>&lt;p&gt;Hiring the right people is one of the most important decisions you make at an early stage startup. Here is how we did it at Merchstack&lt;/p&gt;
-&lt;p&gt;When I started at Merchstack one of the first documents I wrote was “How We Hire”. At a small company each hire is a critical decision, and one bad decision can knock you off course. How we hire would also set the tone for how we treat employees, and also how we see our relationship with employees. Were we actually working together in the best interests of everyone, or just extracting the most value possible for the least amount of money?&lt;/p&gt;</description>
+      <description>Hiring the right people is one of the most important decisions you make at an early stage startup. Here is how we did it at Merchstack
+When I started at Merchstack one of the first documents I wrote was “How We Hire”. At a small company each hire is a critical decision, and one bad decision can knock you off course. How we hire would also set the tone for how we treat employees, and also how we see our relationship with employees. Were we actually working together in the best interests of everyone, or just extracting the most value possible for the least amount of money?
+</description>
+      
     </item>
+    
     <item>
       <title>The Distributed Async Manifesto</title>
       <link>http://localhost:1313/posts/the-distributed-async-manifesto/</link>
       <pubDate>Fri, 21 Jun 2024 12:35:54 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/the-distributed-async-manifesto/</guid>
-      <description>&lt;p&gt;I have been managing globally distributed remote-only teams for almost a decade now, so when Covid hit, we barely noticed. But that doesn’t mean that distributed async doesn’t have its challenges. I have tried to distill what has worked into what I call the Distributed Async Manifesto. Like the Agile Manifesto it tries to be brief, simple, and memorable, with some elaboration on each of the key points. Check it out below:&lt;/p&gt;</description>
+      <description>I have been managing globally distributed remote-only teams for almost a decade now, so when Covid hit, we barely noticed. But that doesn’t mean that distributed async doesn’t have its challenges. I have tried to distill what has worked into what I call the Distributed Async Manifesto. Like the Agile Manifesto it tries to be brief, simple, and memorable, with some elaboration on each of the key points. Check it out below:
+</description>
+      
     </item>
+    
     <item>
       <title>Why NoSQL Databases are Perfect for Ecommerce</title>
       <link>http://localhost:1313/posts/why-nosql-databases-are-perfect-for-ecommerce/</link>
       <pubDate>Fri, 21 Jun 2024 01:14:29 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/why-nosql-databases-are-perfect-for-ecommerce/</guid>
-      <description>&lt;p&gt;People get very passionate about database technologies. There’s nothing more critical than your data, after all. Make the wrong choice, and you could be setting yourself up for failure.&lt;/p&gt;
-&lt;p&gt;When it comes to managing data, every database management system (DBMS) has its strengths and weaknesses, and each one is good at some things and not so good at others. So why did we use MongoDB to power Reaction over a more ‘traditional’ MySQL database? I feel like our reasoning grew out of a single core concept: Mongo’s document structure works the same way that ecommerce works.&lt;/p&gt;</description>
+      <description>People get very passionate about database technologies. There’s nothing more critical than your data, after all. Make the wrong choice, and you could be setting yourself up for failure.
+When it comes to managing data, every database management system (DBMS) has its strengths and weaknesses, and each one is good at some things and not so good at others. So why did we use MongoDB to power Reaction over a more ‘traditional’ MySQL database? I feel like our reasoning grew out of a single core concept: Mongo’s document structure works the same way that ecommerce works.
+</description>
+      
     </item>
+    
     <item>
       <title>About this site</title>
       <link>http://localhost:1313/posts/about/</link>
       <pubDate>Thu, 20 Jun 2024 20:40:19 +0000</pubDate>
+      
       <guid>http://localhost:1313/posts/about/</guid>
-      <description>&lt;p&gt;The Empathy Project is an independent publication launched in June 2024 by Brent Hoover. If you subscribe today, you&amp;rsquo;ll get full access to the website as well as email newsletters about new content when it&amp;rsquo;s available. Your subscription makes this site possible, and allows The Empathy Project to continue to exist. Thank you!&lt;/p&gt;
-&lt;h3 id=&#34;access-all-areas&#34;&gt;Access all areas&lt;/h3&gt;
-&lt;p&gt;By signing up, you&amp;rsquo;ll get access to the full archive of everything that&amp;rsquo;s been published before and everything that&amp;rsquo;s still to come. Your very own private library.&lt;/p&gt;</description>
+      <description>The Empathy Project is an independent publication launched in June 2024 by Brent Hoover. If you subscribe today, you’ll get full access to the website as well as email newsletters about new content when it’s available. Your subscription makes this site possible, and allows The Empathy Project to continue to exist. Thank you!
+</description>
+      
     </item>
+    
   </channel>
 </rss>
